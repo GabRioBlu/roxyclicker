@@ -8,7 +8,7 @@ html, body {
     position: absolute;
     left: -128px;
     top: -128px;
-    border-radius: 64px;;
+    border-radius: 64px;
     transition: transform 0.2s;
 }
 
