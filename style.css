@@ -4,10 +4,11 @@ html, body {
 }
 
 #mainButton {
-    width: 25%;
-    display: block;
-    margin: auto;
-    border-radius: 25%;
+    width: 256px;
+    position: absolute;
+    left: -128px;
+    top: -128px;
+    border-radius: 64px;;
     transition: transform 0.2s;
 }
 
