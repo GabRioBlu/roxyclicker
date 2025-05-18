@@ -11,14 +11,22 @@
 </head>
 <body>
     <div style="height: 100vh; margin: 0px; padding: 0px;">
-        <div id="buttonWindow" style="height: 100vh; width: 50%; margin: 0px; padding: 0px; float: left; box-sizing: border-box; border-style: solid;">
+        <div id="buttonWindow" style="height: 100vh; width: 50%; margin: 0px; padding: 0px; float: left; border-style: solid;">
             <div style="position: relative; top: 50%; left: 50%;">
                 <img id="mainButton" src="images/roxy.png" onclick="clickIcon()"/>
             </div>
             <p id="clickCounter" style="text-align: center; margin: 0px; padding: 20px; font-size: xx-large;">Clicks: 0</p>
         </div>
-        <div id="upgradeWindow" style="height: 100vh; width: 50%; margin: 0px; padding: 0px; float: right; box-sizing: border-box; border-style: solid;">
-
+        <div id="upgradeWindow" style="height: 100vh; width: 50%; margin: 0px; padding: 0px; float: right; border-style: solid;">
+            <div class="upgrade" style="background-color: #ff6ff2;">
+                <img src="images/roxy.png"/>
+                <div class="upgradeDetails">
+                    <p>roxy upgrade</p>
+                    <p>+1 click power</p>
+                    <p id="costMarker">cost: 25 clicks</p>
+                </div>
+                <button onclick="buyUpgrade()">buy</button>
+            </div>
         </div>
     </div>
 

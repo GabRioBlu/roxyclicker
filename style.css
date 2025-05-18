@@ -3,6 +3,10 @@ html, body {
     margin: 0px;
 }
 
+div{
+    box-sizing: border-box;
+}
+
 #mainButton {
     width: 256px;
     position: absolute;
@@ -18,4 +22,34 @@ html, body {
 
 #mainButton:active {
     transform: scale(0.9);
+}
+
+.upgrade{
+    position: relative;
+    height: 128px;
+}
+
+.upgrade > img{
+    width: 128px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.upgrade > .upgradeDetails{
+    position: absolute;
+    left: 128px;
+    top: 0px;
+    padding: 10px;
+}
+
+.upgrade > .upgradeDetails > p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.upgrade > button{
+    position: absolute;
+    right: 0px;
+    width: 128px;
+    height: 128px;
 }
