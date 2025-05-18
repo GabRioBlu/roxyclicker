@@ -1,0 +1,20 @@
+html, body {
+    height: 100;
+    margin: 0px;
+}
+
+#mainButton {
+    width: 25%;
+    display: block;
+    margin: auto;
+    border-radius: 25%;
+    transition: transform 0.2s;
+}
+
+#mainButton:hover {
+    transform: scale(1.05);
+}
+
+#mainButton:active {
+    transform: scale(0.9);
+}
