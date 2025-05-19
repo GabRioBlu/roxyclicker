@@ -28,3 +28,9 @@ function toggleSettingsBar(){
     document.getElementById("settingsBar").classList.toggle("opened");
     document.getElementById("settingsGear").classList.toggle("opened");
 }
+
+function update(){
+    console.log(document.getElementById("settingsGear2").offsetLeft);
+}
+
+setInterval(update, 50);

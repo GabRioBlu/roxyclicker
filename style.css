@@ -44,6 +44,7 @@ div{
     height: 64px;
     background-color: #ff6ff2;
     transition: width 0.5s;
+    overflow: hidden;
 }
 
 #settingsBar.opened{
