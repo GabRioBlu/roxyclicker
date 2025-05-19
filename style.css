@@ -5,6 +5,7 @@ html, body {
 
 div{
     box-sizing: border-box;
+    user-select: none;
 }
 
 #mainButton {
@@ -13,16 +14,40 @@ div{
     left: -128px;
     top: -128px;
     border-radius: 64px;
-    transition: transform 0.2s;
+    transition: scale 0.2s;
     touch-action: manipulation;
 }
 
 #mainButton:hover {
-    transform: scale(1.05);
+    scale: 1.05;
 }
 
 #mainButton:active {
-    transform: scale(0.9);
+    scale: 0.9;
+}
+
+#settingsGear{
+    pointer-events: none;
+    display: block;
+    transition: rotate 0.2s;
+}
+
+#settingsGear.opened{
+    rotate: 270deg;
+}
+
+#settingsBar{
+    position: absolute;
+    left: 72px;
+    bottom: 80px;
+    width: 0px;
+    height: 64px;
+    background-color: #ff6ff2;
+    transition: width 0.5s;
+}
+
+#settingsBar.opened{
+    width: 360px;
 }
 
 .upgrade{

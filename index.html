@@ -18,15 +18,25 @@
             </div>
             <p id="clickCounter" style="text-align: center; margin: 0px; padding: 20px; font-size: xx-large;">Clicks: 0</p>
             <div onclick="toggleMusic()" style="position: absolute; bottom: 8px; left: 8px; width: 64px; height: 64px; background-color: #ff6ff2; text-align: center; align-content: center;">music</div>
-            <div style="position: absolute; bottom: 80px; left: 8px; width: 64px; height: 64px; background-color: #ff6ff2;">
-                <object type="image/svg+xml" data="images/buttonIcons/gear.svg">
-                    <style>
-                        object {
-                            position: absolute;
-                            width: 64px;
-                        }
-                    </style>
-                </object>
+            <div id="settingsBar">
+                <div style="position: absolute; right: 280px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                    <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                </div>
+                <div style="position: absolute; right: 210px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                    <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                </div>
+                <div style="position: absolute; right: 140px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                    <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                </div>
+                <div style="position: absolute; right: 70px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                    <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                </div>
+                <div style="position: absolute; right: 0px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                    <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                </div>
+            </div>
+            <div onclick="toggleSettingsBar()" style="position: absolute; bottom: 80px; left: 8px; width: 64px; height: 64px; background-color: #ff6ff2;">
+                <object id="settingsGear" type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
             </div>
         </div>
         <div id="divider" style="position: absolute; width: 1%; height: 100%; left: 49.5%; top: 0px; background-color: #c46fff;">

@@ -22,3 +22,9 @@ function toggleMusic(){
     else document.getElementById("music").play();
     musicPlaying = !musicPlaying;
 }
+
+function toggleSettingsBar(){
+    console.log("a")
+    document.getElementById("settingsBar").classList.toggle("opened");
+    document.getElementById("settingsGear").classList.toggle("opened");
+}
