@@ -51,6 +51,16 @@ div{
     width: 360px;
 }
 
+#musicToggle.enabled path{
+    transition: 0.3s;
+    d: path("M70,10 L50,10")
+}
+
+.svg-1:hover path {
+    transition: 0.3s;
+    d: path("M8,2 L2,8");
+}
+
 .upgrade{
     position: relative;
     height: 128px;

@@ -20,11 +20,11 @@ function buyUpgrade(){
 function toggleMusic(){
     if (musicPlaying) document.getElementById("music").pause();
     else document.getElementById("music").play();
+    document.getElementById("musicToggle").classList.toggle("enabled");
     musicPlaying = !musicPlaying;
 }
 
 function toggleSettingsBar(){
-    console.log("a")
     document.getElementById("settingsBar").classList.toggle("opened");
     document.getElementById("settingsGear").classList.toggle("opened");
 }

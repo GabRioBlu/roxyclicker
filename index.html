@@ -18,11 +18,13 @@
             </div>
             <p id="clickCounter" style="text-align: center; margin: 0px; padding: 20px; font-size: xx-large;">Clicks: 0</p>
             <div onclick="toggleMusic()" style="position: absolute; bottom: 8px; left: 8px; width: 64px; height: 64px; background-color: #ff6ff2; text-align: center; align-content: center;">
-                <object style="pointer-events: none;" type="image/svg+xml" data="images/buttonIcons/music.svg"></object>
+                <object id="musicToggle" style="pointer-events: none;" type="image/svg+xml" data="images/buttonIcons/music.svg"></object>
             </div>
             <div id="settingsBar">
                 <div style="position: absolute; right: 288px; width: 64px; height: 64px; background-color: #ff6ff2;">
-                    <object type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
+                    <svg viewBox="0 0 10 10" class="svg-1">
+                        <path d="M2,2 L8,8" stroke="black" />
+                    </svg>
                 </div>
                 <div id="settingsGear2" style="position: absolute; right: 216px; width: 64px; height: 64px; background-color: #ff6ff2;">
                     <object type="image/svg+xml" data="images/buttonIcons/gear.svg"></object>
