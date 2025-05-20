@@ -51,14 +51,19 @@ div{
     width: 360px;
 }
 
+#musicToggle path{
+	transition: stroke 0s, d 0.3s;
+}
+
 #musicToggle.enabled path{
-    transition: 0.3s;
-    d: path("M70,10 L50,10")
+	transition: stroke 0s 0.3s, d 0.3s;
+    d: path("M 70 10 L 70 10");
+	stroke: transparent;
 }
 
 .svg-1:hover path {
     transition: 0.3s;
-    d: path("M8,2 L2,8");
+    d: path("M 8 2 L 2 8");
 }
 
 .upgrade{
