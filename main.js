@@ -1,15 +1,39 @@
 var clicks = 0;
-var clicksPerClick = 1;
 var upgradeCost = 25;
 var musicPlaying = false;
 var currentTheme = "lightMode";
 
+roxyLayer.buyables.forEach((buyable, i) => {
+	buyableDiv = document.createElement("div");
+	buyableDiv.classList.add("upgrade");
+	buyableDiv.classList.add((i % 2 == 0) ? "player" : "aspect");
+	image = document.createElement("img");
+	image.src = buyable.image();
+	buyableDiv.appendChild(image);
+	infoDiv = document.createElement("div");
+	infoDiv.classList.add("upgradeDetails");
+	p1 = document.createElement("p");
+	p1.innerText = buyable.title();
+	infoDiv.appendChild(p1);
+	p2 = document.createElement("p");
+	p2.innerText = buyable.description();
+	infoDiv.appendChild(p2);
+	p3 = document.createElement("p");
+	p3.innerText = "Cost: " + buyable.cost();
+	infoDiv.appendChild(p3);
+	buyableDiv.appendChild(infoDiv);
+	button = document.createElement("button");
+	button.setAttribute("onclick", "roxyLayer.buyables[" + i + "].buy()");
+	button.innerText = "buy";
+	buyableDiv.appendChild(button);
+	document.getElementById("upgradeWindow").appendChild(buyableDiv);
+})
+
 function clickIcon() {
-    clicks += clicksPerClick;
-    document.getElementById("clickCounter").innerText = "Clicks: " + clicks;
+    clicks += 1 + roxyLayer.buyables[0].effect();
 }
 
-function buyUpgrade() {
+function buyUpgrade(i) {
     if (clicks < upgradeCost) return;
     clicks -= upgradeCost;
     upgradeCost *= 2;
@@ -98,7 +122,13 @@ function toggleSettingsBar() {
 }
 
 function update() {
-
+	clicks += roxyLayer.buyables[1].effect() / 20;
+	
+	roxyLayer.buyables.forEach((buyable, i) => {
+		document.getElementById("upgradeWindow").children[i].children[2].disabled = (clicks < buyable.cost());
+		document.getElementById("upgradeWindow").children[i].children[1].children[2].innerText = "Cost: " + buyable.cost();
+	})
+	document.getElementById("clickCounter").innerText = "Clicks: " + parseInt(clicks);
 }
 
 setInterval(update, 50);

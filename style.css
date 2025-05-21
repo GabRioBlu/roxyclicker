@@ -99,14 +99,22 @@ div{
     padding: 0px;
 }
 
-.upgrade > .upgradeDetails{
+.upgrade.player {
+	background-color: #ff6ff2;
+}
+
+.upgrade.aspect {
+	background-color: #104ea2;
+}
+
+.upgradeDetails{
     position: absolute;
     left: 128px;
     top: 0px;
     padding: 10px;
 }
 
-.upgrade > .upgradeDetails > p{
+.upgradeDetails > p{
     margin: 0px;
     padding: 0px;
 }
@@ -116,4 +124,12 @@ div{
     right: 0px;
     width: 128px;
     height: 128px;
+}
+
+.upgrade.player > button {
+	background-color: #ff6ff2;
+}
+
+.upgrade.aspect > button {
+	background-color: #104ea2;
 }
