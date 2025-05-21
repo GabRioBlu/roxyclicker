@@ -61,9 +61,16 @@ div{
 	stroke: transparent;
 }
 
-.svg-1:hover path {
-    transition: 0.3s;
-    d: path("M 8 2 L 2 8");
+.themeToggle{
+    transition: opacity 0s 0.15s, rotate 0.3s;
+    opacity: 100%;
+    position: absolute;
+}
+
+.themeToggle.invisible{
+
+    rotate: 360deg;
+    opacity: 0%;
 }
 
 .upgrade{

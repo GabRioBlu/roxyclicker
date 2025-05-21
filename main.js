@@ -2,6 +2,7 @@ var clicks = 0;
 var clicksPerClick = 1;
 var upgradeCost = 25;
 var musicPlaying = false;
+var currentTheme = "lightMode";
 
 function clickIcon() {
     clicks += clicksPerClick;
@@ -22,6 +23,20 @@ function toggleMusic(){
     else document.getElementById("music").play();
     document.getElementById("musicToggle").classList.toggle("enabled");
     musicPlaying = !musicPlaying;
+}
+
+function toggleTheme(){
+     if (currentTheme == "lightMode"){
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        currentTheme = "darkMode";
+     } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        currentTheme = "lightMode";
+     }
+     document.getElementById("lightMode").classList.toggle("invisible");
+     document.getElementById("darkMode").classList.toggle("invisible");
 }
 
 function toggleSettingsBar(){
