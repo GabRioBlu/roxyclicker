@@ -39,13 +39,40 @@ function toggleTheme(){
      document.getElementById("darkMode").classList.toggle("invisible");
 }
 
+function checkNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && evt.key != "Backspace")
+        return false;
+    if (parseInt(document.getElementById("volumeInput").value + evt.key) > 100 && getSelection().toString() != "100"){
+        document.getElementById("volumeInput").value = 100;
+        return false;
+    } else if (parseInt(document.getElementById("volumeInput").value + evt.key) < 0){
+        document.getElementById("volumeInput").value = 0;
+        return false;
+    } else if (document.getElementById("volumeInput").value + evt.key == ""){
+        document.getElementById("volumeInput").value = 0;
+    }
+    console.log("b")
+    return true;
+}
+
+function updateVolumeFromText(){
+    console.log("a");
+    document.getElementById("volumeSlider").value = parseInt(document.getElementById("volumeInput").value);
+    document.getElementById("music").volume = document.getElementById("volumeSlider").value / 100;
+}
+
+function updateVolumeFromSlider(){
+    document.getElementById("volumeInput").value = document.getElementById("volumeSlider").value;
+}
+
 function toggleSettingsBar(){
     document.getElementById("settingsBar").classList.toggle("opened");
     document.getElementById("settingsGear").classList.toggle("opened");
 }
 
 function update(){
-    console.log(document.getElementById("settingsGear2").offsetLeft);
+
 }
 
 setInterval(update, 50);
