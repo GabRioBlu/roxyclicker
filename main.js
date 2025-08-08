@@ -128,7 +128,14 @@ function update() {
 		document.getElementById("upgradeWindow").children[i].children[2].disabled = (clicks < buyable.cost());
 		document.getElementById("upgradeWindow").children[i].children[1].children[2].innerText = "Cost: " + buyable.cost();
 	})
-	document.getElementById("clickCounter").innerText = "Clicks: " + parseInt(clicks);
+	if (parseInt(clicks) >= 1000)
+	{
+		document.getElementById("clickCounter").innerText = "SPECTROGRAM";
+	}
+	else
+	{
+		document.getElementById("clickCounter").innerText = "Clicks: " + parseInt(clicks);
+	}
 }
 
 setInterval(update, 50);
